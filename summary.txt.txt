@@ -1,0 +1,10 @@
+Area: #ALUTs = 194, #Registers = 159
+      Area = 353
+
+Clock Cycles = 255
+Clock Period = 1/fmax = 1/344.47 MHz = 2.903 ns
+
+Delay = 740.265 ns
+
+Total = Area * Cycles * Clock Period
+Total = 353 * 255 * 2.903 ns = 261.313 µs

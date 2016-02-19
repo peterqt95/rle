@@ -1,0 +1,142 @@
+# do rle_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying D:/Altera_Lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/Altera_Lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION {C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 17:51:57 on Feb 07,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION" C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle.v 
+# -- Compiling module rle
+# 
+# Top level modules:
+# 	rle
+# End time: 17:51:57 on Feb 07,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 17:52:10 on Feb 07,2016
+# vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle.v 
+# -- Compiling module rle
+# 
+# Top level modules:
+# 	rle
+# End time: 17:52:10 on Feb 07,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle_testbench2.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 17:52:10 on Feb 07,2016
+# vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle_testbench2.v 
+# -- Compiling module rle_testbench2
+# 
+# Top level modules:
+# 	rle_testbench2
+# End time: 17:52:10 on Feb 07,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.rle_testbench2
+# vsim work.rle_testbench2 
+# Start time: 17:52:15 on Feb 07,2016
+# Loading work.rle_testbench2
+# Loading work.rle
+add wave sim:/rle_testbench2/*
+run
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# Error: memory reference not word aligned!
+# 
+# -----------
+# 
+# Plaintext	 
+# 
+# -----------
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 0a0c0b0a
+# 
+# 0b0a0c0b
+# 
+# 0c0b0a0c
+# 
+# 000c0b0a
+# 
+# Latency         114!
+# 
+# -----------
+# 
+# Correct rle_size:         78
+# 
+# -----------
+# 
+# Compressed text 1
+# 
+# -----------
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 0a010c01
+# 
+# 0c010b01
+# 
+# 0b010a01
+# 
+# 00000c01
+# 
+# ** Note: $stop    : C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle_testbench2.v(123)
+#    Time: 2550 ps  Iteration: 1  Instance: /rle_testbench2
+# Break in Module rle_testbench2 at C:/Users/Peter/Desktop/ECE111/RLE_FINAL_SUBMISSION/rle_testbench2.v line 123
